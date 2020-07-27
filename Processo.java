@@ -22,6 +22,8 @@ public class Processo implements Runnable{
     public void liberarRecurso(Processo p){
 
     }
+
+    
     
 
     @Override
@@ -77,5 +79,28 @@ public class Processo implements Runnable{
     public void setFluxoSaida(DataOutputStream fluxoSaida) {
         this.fluxoSaida = fluxoSaida;
     }
+
+    public Processo(int id, int portaOrigem, int portaDestino, Estado estado) {
+        this.id = id;
+        this.portaOrigem = portaOrigem;
+        this.portaDestino = portaDestino;
+        this.estado = estado;
+    }
+
+    public Processo(int id, int portaOrigem, int portaDestino, Estado estado, DataInputStream fluxoEntrada,
+            DataOutputStream fluxoSaida) {
+        this.id = id;
+        this.portaOrigem = portaOrigem;
+        this.portaDestino = portaDestino;
+        this.estado = estado;
+        this.fluxoEntrada = fluxoEntrada;
+        this.fluxoSaida = fluxoSaida;
+    }
+
+    public Processo() {
+    }
+    
+    
+    
 
 }

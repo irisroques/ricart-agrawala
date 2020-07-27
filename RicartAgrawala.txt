@@ -1,0 +1,18 @@
+Na inicialização
+state := RELEASED;
+Para entrar na seção
+state := WANTED;
+Envia a requisição por multicast para todos os processos;
+T := carimbo de tempo da requisição;
+Espera até (número de respostas recebidas = (N – 1));
+state := HELD;
+No recebimento de uma requisição <Ti , p i> em pj (i ≠ j)
+if (state = HELD or (state = WANTED and (T, pj ) < (Ti , pi )))
+then
+enfileira requisição depi sem responder;
+else
+responde imediatamente para pi ;
+end if
+Para sair da seção crítica
+state := RELEASED;
+responde a todas as requisições enfileiradas;
