@@ -10,6 +10,18 @@ public class Processo implements Runnable{
     DataInputStream fluxoEntrada;
     DataOutputStream fluxoSaida;
 
+
+    public boolean entrar(){
+        return false;
+    }
+
+    public void acessarRecurso(){
+
+    }
+
+    public void liberarRecurso(Processo p){
+
+    }
     
 
     @Override
