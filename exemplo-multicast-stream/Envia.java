@@ -13,7 +13,8 @@ class Envia {
         int porta = 6868;
         InetAddress ipGrupo = null;
         MulticastSocket s = null;
-        String msg = "mensagem default";
+        Processo p = new Processo();
+        String msg = p.getEstado().toString();
         // junta-se a um grupo de Multicast
         try {
             ipGrupo = InetAddress.getByName("224.225.226.227");
